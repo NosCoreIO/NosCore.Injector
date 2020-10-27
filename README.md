@@ -1,9 +1,7 @@
 # NosCore.Packets #
-[forked from ChickenAPI/ChickenAPI.Packets](https://github.com/ChickenAPI/ChickenAPI.Packets)
 
 <p align="center">
   <img width="250px" src="https://cdn.discordapp.com/attachments/319565884454731795/426892646288457728/N2.png"/>
-  <img src="docs/_media/logo.png"></img>
 </p>
 
 [![NuGet](https://img.shields.io/nuget/v/NosCore.Packets.svg?style=flat-square)](https://www.nuget.org/packages/NosCore.Packets/)
