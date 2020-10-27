@@ -495,5 +495,7 @@ fabric.properties
 ### VisualStudio Patch ###
 # By default, sensitive information, such as encrypted password
 # should be stored in the .pubxml.user file.
-/build/netstandard2.*
 /documentation/*.received.md
+/build/netstandard*.*
+/build/netcoreapp*.*
+/publish
