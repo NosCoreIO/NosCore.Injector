@@ -4,8 +4,7 @@
   <img width="250px" src="https://cdn.discordapp.com/attachments/319565884454731795/426892646288457728/N2.png"/>
 </p>
 
-[![NuGet](https://img.shields.io/nuget/v/NosCore.Packets.svg?style=flat-square)](https://www.nuget.org/packages/NosCore.Packets/)
-[![Travis build status](https://travis-ci.org/NosCoreIO/NosCore.Packets.svg?branch=master)](https://travis-ci.org/NosCoreIO/NosCore.Packets)
+[![Travis build status](https://travis-ci.org/NosCoreIO/NosCore.Injector.svg?branch=master)](https://travis-ci.org/NosCoreIO/NosCore.Injector)
 
 ## You like our work ? ##
 <a href='https://github.com/sponsors/0Lucifer0' target='_blank'><img height='48' style='border:0px;height:46px;' src='https://i.gyazo.com/47b2ca2eb6e1ce38d02b04c410e1c82a.png' border='0' alt='Sponsor me!' /></a>
