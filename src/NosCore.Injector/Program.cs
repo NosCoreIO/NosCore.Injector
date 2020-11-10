@@ -17,7 +17,7 @@ namespace NosCore.Injector
 {
     public class Program
     {
-        private const string Title = "NosCore - Pathfinder GUI";
+        private const string Title = "NosCore - Injector";
 
         public static void Main(string[] args)
         {
