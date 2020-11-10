@@ -498,4 +498,5 @@ fabric.properties
 /documentation/*.received.md
 /build/netstandard*.*
 /build/netcoreapp*.*
+/build/net*.*
 /publish
