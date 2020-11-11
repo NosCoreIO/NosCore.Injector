@@ -1,4 +1,4 @@
-# NosCore.Packets #
+# NosCore.Injector #
 
 <p align="center">
   <img width="250px" src="https://cdn.discordapp.com/attachments/319565884454731795/426892646288457728/N2.png"/>
