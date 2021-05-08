@@ -4,7 +4,14 @@
   <img width="250px" src="https://cdn.discordapp.com/attachments/319565884454731795/426892646288457728/N2.png"/>
 </p>
 
-[![Travis build status](https://travis-ci.com/NosCoreIO/NosCore.Injector.svg?branch=master)](https://travis-ci.com/NosCoreIO/NosCore.Injector)
+[![.NET](https://github.com/NosCoreIO/NosCore.Injector/actions/workflows/dotnet.yml/badge.svg?branch=master)](https://github.com/NosCoreIO/NosCore.Injector/actions/workflows/dotnet.yml)
+
+# Special Thanks for Contributions #
+<p align="left">
+<a href="https://aws.amazon.com"><img height="100px" src="https://chiefit.me/wp-content/uploads/2019/06/Amazon-Web-Services_logo835x396.png"/></a>
+<a href="https://www.navicat.com"><img height="100px" src="https://i.ibb.co/kx9WJgv/Navicat-Premium.png"/></a>
+<a href="https://www.jetbrains.com"><img height="100px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/JetBrains_Logo_2016.svg/1200px-JetBrains_Logo_2016.svg.png"/></a>
+</p>
 
 ## You like our work ? ##
 <a href='https://github.com/sponsors/0Lucifer0' target='_blank'><img height='48' style='border:0px;height:46px;' src='https://i.gyazo.com/47b2ca2eb6e1ce38d02b04c410e1c82a.png' border='0' alt='Sponsor me!' /></a>
