@@ -9,14 +9,20 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - name: Setup .NET
-      uses: actions/setup-dotnet@v3
+      uses: actions/setup-dotnet@v5
       with:
-        dotnet-version: 7.0.x
-        
-    - name: Run Unit Tests
-      run: |
-        dotnet restore
-        dotnet build
-        dotnet test test/NosCore.Injector.Tests -v m
+        dotnet-version: '10.0.x'
+
+    - name: Display .NET info
+      run: dotnet --info
+
+    - name: Restore dependencies
+      run: dotnet restore
+
+    - name: Build
+      run: dotnet build --no-restore
+
+    - name: Test
+      run: dotnet test --no-build --verbosity normal test/NosCore.Injector.Tests
