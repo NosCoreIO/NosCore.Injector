@@ -10,6 +10,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using NosCore.Shared.Configuration;
+using NosCore.Shared.Helpers;
 using NosCore.Shared.I18N;
 using Serilog;
 
@@ -26,7 +27,7 @@ namespace NosCore.Injector
         public static IHostBuilder CreateHostBuilder(string[] args)
         {
             var injectorConfiguration = new InjectorConfiguration();
-            try { Console.Title = Title; } catch (PlatformNotSupportedException) { }
+            ConsoleHelper.SetTitle(Title);
             var configuration = ConfiguratorBuilder.InitializeConfiguration(args, new[] { "injector.yml", "logger.yml" });
 
             LogLanguage.Language = injectorConfiguration.Language;
