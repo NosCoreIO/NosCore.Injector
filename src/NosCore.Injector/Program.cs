@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -64,26 +64,34 @@ namespace NosCore.Injector
         {
             Logger.PrintHeader(ConsoleText);
             var injectors = new Dictionary<int, Bleak.Injector>();
-            while (!stoppingToken.IsCancellationRequested)
+            try
             {
-                Process[] processlist = Process.GetProcessesByName(_configuration.ExecutableName);
-                foreach (var process in processlist.Where(o=>!injectors.ContainsKey(o.Id)))
+                while (!stoppingToken.IsCancellationRequested)
                 {
-                    _logger.LogInformation(LogLanguage.Instance.GetMessageFromKey(LogLanguageKey.INJECTING_PID),
-                        process.Id);
-                    var injector = new Bleak.Injector(process.Id, _configuration.PacketLoggerDllPath,
-                        InjectionMethod.CreateThread);
-                    injector.InjectDll();
-                    injectors.Add(process.Id, injector);
-                    _logger.LogInformation(LogLanguage.Instance.GetMessageFromKey(LogLanguageKey.INJECTED_PID), process.Id);
+                    Process[] processlist = Process.GetProcessesByName(_configuration.ExecutableName);
+                    foreach (var process in processlist.Where(o=>!injectors.ContainsKey(o.Id)))
+                    {
+                        _logger.LogInformation(LogLanguage.Instance.GetMessageFromKey(LogLanguageKey.INJECTING_PID),
+                            process.Id);
+                        var injector = new Bleak.Injector(process.Id, _configuration.PacketLoggerDllPath,
+                            InjectionMethod.CreateThread);
+                        injector.InjectDll();
+                        injectors.Add(process.Id, injector);
+                        _logger.LogInformation(LogLanguage.Instance.GetMessageFromKey(LogLanguageKey.INJECTED_PID), process.Id);
+                    }
+
+                    await Task.Delay(1000, stoppingToken);
                 }
-
-                await Task.Delay(1000, stoppingToken);
             }
-
-            foreach (var injector in injectors.Values)
+            catch (OperationCanceledException) when (stoppingToken.IsCancellationRequested)
             {
-                injector.EjectDll();
+            }
+            finally
+            {
+                foreach (var injector in injectors.Values)
+                {
+                    injector.EjectDll();
+                }
             }
         }
     }
