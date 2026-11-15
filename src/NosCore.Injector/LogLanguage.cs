@@ -1,4 +1,4 @@
-﻿//  __  _  __    __   ___ __  ___ ___
+//  __  _  __    __   ___ __  ___ ___
 // |  \| |/__\ /' _/ / _//__\| _ \ __|
 // | | ' | \/ |`._`.| \_| \/ | v / _|
 // |_|\__|\__/ |___/ \__/\__/|_|_\___|
@@ -13,8 +13,6 @@ namespace NosCore.Injector
     public sealed class LogLanguage
     {
         private static LogLanguage? _instance;
-
-        private static readonly CultureInfo ResourceCulture = new CultureInfo(Language.ToString());
 
         private readonly ResourceManager _manager;
 
@@ -37,11 +35,8 @@ namespace NosCore.Injector
 
         public string GetMessageFromKey(LogLanguageKey messageKey, string? culture)
         {
-            var cult = culture != null ? new CultureInfo(culture) : ResourceCulture;
-            var resourceMessage = (_manager != null)
-                ? _manager.GetResourceSet(cult, true,
-                        cult.TwoLetterISOLanguageName == default(RegionType).ToString().ToLower(cult))
-                    ?.GetString(messageKey.ToString()) : string.Empty;
+            var resourceMessage = _manager.GetString(messageKey.ToString(),
+                new CultureInfo(culture ?? Language.ToString()));
 
             return !string.IsNullOrEmpty(resourceMessage) ? resourceMessage : $"#<{messageKey}>";
         }
