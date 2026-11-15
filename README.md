@@ -24,8 +24,8 @@ ExecutableName: noscore-dev
 PacketLoggerDllPath: C:\Program Files (x86)\Nostale\fr-FR\NLogger.dll
 ```
 
-`ExecutableName` is the process name without `.exe`. The injector checks for new processes every second and ejects the
-DLL when it stops.
+These are example values: set `ExecutableName` to your client's process name, without `.exe`, and
+`PacketLoggerDllPath` to the DLL you want loaded. The injector checks for new processes every second.
 
 ## Building
 
