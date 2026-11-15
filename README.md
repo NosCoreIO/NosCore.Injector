@@ -25,7 +25,8 @@ PacketLoggerDllPath: C:\Program Files (x86)\Nostale\fr-FR\NLogger.dll
 ```
 
 These are example values: set `ExecutableName` to your client's process name, without `.exe`, and
-`PacketLoggerDllPath` to the DLL you want loaded. The injector checks for new processes every second.
+`PacketLoggerDllPath` to the DLL you want loaded. The injector checks for new processes every second, and ejects the
+DLL from every client it injected when it stops.
 
 ## Building
 
