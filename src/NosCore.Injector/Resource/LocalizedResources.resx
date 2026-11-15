@@ -117,4 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="INJECTING_PID" xml:space="preserve">
+    <value>Injecting the packet logger into process {ProcessId}</value>
+  </data>
+  <data name="INJECTED_PID" xml:space="preserve">
+    <value>Injected the packet logger into process {ProcessId}</value>
+  </data>
 </root>
